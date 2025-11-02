@@ -72,10 +72,10 @@ npm run coverage
 npm run test:integration
 
 # Live testing
-npm run test:live
+npm run test:live bash```
 
 
-How to Run the Project
+## How to Run the Project
 Prerequisites
 Node.js >= 16
 
