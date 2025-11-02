@@ -61,7 +61,8 @@ Integrated with Auth.js for comprehensive authentication supporting:
 ## Testing
 
 The project includes a robust testing setup:
-```bash
+
+
 # Run tests
 npm test
 
@@ -72,15 +73,14 @@ npm run coverage
 npm run test:integration
 
 # Live testing
-npm run test:live bash```
+npm run test:live  
 
 
-## How to Run the Project
+How to Run the Project
 Prerequisites
 Node.js >= 16
 
 npm or yarn
-
 
 Installation
 bash
@@ -95,7 +95,6 @@ npm run build
 
 # Start production server
 npm start
-
 Environment Setup
 Clone the repository
 
@@ -114,21 +113,3 @@ npm run build    # Create production build
 npm run test     # Run test suite
 npm run lint     # Run linter
 npm run coverage # Generate test coverage report
-Future Improvements
-Immediate Enhancements
-Add environment configuration examples
-
-Implement CI/CD pipeline with GitHub Actions
-
-Add Docker containerization
-
-Enhance documentation with API references
-
-Technical Debt & Optimization
-Upgrade to latest Next.js features
-
-Implement advanced caching strategies
-
-Add performance monitoring
-
-Enhance error handling and logging
