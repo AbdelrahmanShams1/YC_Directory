@@ -1,90 +1,67 @@
-Next.js Application with Advanced Architecture
-Project Overview
+# Next.js Application with Advanced Architecture
+
+## Project Overview
+
 A modern Next.js web application built with a sophisticated architecture that includes AWS integration, authentication capabilities, and development tooling. The project demonstrates enterprise-grade patterns with proper dependency management and development workflows.
 
-Tech Stack
-Core Technologies
-Next.js - React framework for production
+## Tech Stack
 
-Node.js - Runtime environment
+### Core Technologies
+- **Next.js** - React framework for production
+- **Node.js** - Runtime environment
+- **TypeScript** - Type safety and developer experience
 
-TypeScript - Type safety and developer experience
+### Key Dependencies
+- **@auth/core** (v0.41.0) - Authentication system
+- **@architect** suite - Serverless application toolkit
+  - `@architect/hydrate` - Dependency management
+  - `@architect/inventory` - Resource enumeration
+  - `@architect/asap` - Static asset proxy
+  - `@architect/parser` - Manifest parsing
+  - `@architect/utils` - Common utilities
+- **@aws-lite** - Lightweight AWS client with plugins for:
+  - S3, SSM, DynamoDB, Lambda, and other AWS services
+- **Babel** - JavaScript compiler and transpiler
+- **Preact** - Lightweight React alternative
 
-Key Dependencies
-@auth/core (v0.41.0) - Authentication system
+### Development Tools
+- **ESLint** - Code linting
+- **Tape** - Testing framework
+- **NYC** - Code coverage
+- **Vite** - Build tool for some components
+- **VS Code** with MCP (Model Context Protocol) configuration
 
-@architect suite - Serverless application toolkit
+## Architecture
 
-@architect/hydrate - Dependency management
-
-@architect/inventory - Resource enumeration
-
-@architect/asap - Static asset proxy
-
-@architect/parser - Manifest parsing
-
-@architect/utils - Common utilities
-
-@aws-lite - Lightweight AWS client with plugins for:
-
-S3, SSM, DynamoDB, Lambda, and other AWS services
-
-Babel - JavaScript compiler and transpiler
-
-Preact - Lightweight React alternative
-
-Development Tools
-ESLint - Code linting
-
-Tape - Testing framework
-
-NYC - Code coverage
-
-Vite - Build tool for some components
-
-VS Code with MCP (Model Context Protocol) configuration
-
-Architecture
-Serverless-First Approach
+### Serverless-First Approach
 The project is designed with serverless architecture in mind, leveraging AWS Lambda and related services through the Architect framework.
 
-Modular Design
-Plugin-based AWS integration using @aws-lite plugins
+### Modular Design
+- **Plugin-based AWS integration** using `@aws-lite` plugins
+- **Dependency hydration system** for optimal package management
+- **Static asset optimization** with ASAP (Architect Static Asset Proxy)
 
-Dependency hydration system for optimal package management
-
-Static asset optimization with ASAP (Architect Static Asset Proxy)
-
-Authentication Ready
+### Authentication Ready
 Integrated with Auth.js for comprehensive authentication supporting:
+- OAuth/OpenID Connect
+- JWT tokens
+- WebAuthn for passwordless authentication
+- Email authentication with nodemailer
 
-OAuth/OpenID Connect
+## Features
 
-JWT tokens
+- ✅ **Next.js App Router** - Modern React server components
+- ✅ **AWS Integration** - Full suite of AWS services
+- ✅ **Authentication System** - Multi-provider auth support
+- ✅ **Static Asset Delivery** - Optimized asset serving
+- ✅ **Development Tooling** - Comprehensive testing and linting
+- ✅ **TypeScript Support** - Full type safety
+- ✅ **Serverless Deployment Ready** - Architect framework integration
 
-WebAuthn for passwordless authentication
+## Testing
 
-Email authentication with nodemailer
-
-Features
-✅ Next.js App Router - Modern React server components
-
-✅ AWS Integration - Full suite of AWS services
-
-✅ Authentication System - Multi-provider auth support
-
-✅ Static Asset Delivery - Optimized asset serving
-
-✅ Development Tooling - Comprehensive testing and linting
-
-✅ TypeScript Support - Full type safety
-
-✅ Serverless Deployment Ready - Architect framework integration
-
-Testing
 The project includes a robust testing setup:
-
-bash
+```bash
 # Run tests
 npm test
 
@@ -96,25 +73,14 @@ npm run test:integration
 
 # Live testing
 npm run test:live
-Folder Structure
-text
-yc_project/
-├── .next/                 # Next.js build outputs
-├── .vscode/              # VS Code configuration
-│   └── mcp.json         # Model Context Protocol config
-├── node_modules/         # Dependencies
-│   ├── @actions/        # GitHub Actions utilities
-│   ├── @architect/      # Serverless framework
-│   ├── @auth/           # Authentication core
-│   ├── @aws-lite/       # AWS client and plugins
-│   ├── @babel/          # Compilation and transpilation
-│   └── @asamuzakjp/     # CSS and DOM utilities
-└── (other config files)
+
+
 How to Run the Project
 Prerequisites
 Node.js >= 16
 
 npm or yarn
+
 
 Installation
 bash
@@ -129,6 +95,7 @@ npm run build
 
 # Start production server
 npm start
+
 Environment Setup
 Clone the repository
 
@@ -165,20 +132,3 @@ Implement advanced caching strategies
 Add performance monitoring
 
 Enhance error handling and logging
-
-Feature Roadmap
-Database integration examples
-
-Real-time features with WebSockets
-
-PWA capabilities
-
-Internationalization (i18n)
-
-Advanced analytics integration
-
-Contributing
-We welcome contributions! Please see our contributing guidelines for more details.
-
-License
-This project is licensed under the terms included in your project dependencies (primarily MIT and Apache-2.0 licenses from the core dependencies).
